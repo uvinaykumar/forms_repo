@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    {% include 'cdnlines.html' %}
+</head>
+<body>
+<style>
+    h2{
+
+    }
+    body{
+        background-color: thistle;
+    }
+    input{
+        margin:10px;
+        padding-top: 10px;
+        border: 10px solid;
+    }
+    form{
+
+        border-radius: 10px;
+        border: 2px greenyellow;
+        margin: 10px 20px 10px 10px;
+        padding: 15px;
+        box-shadow: 0 0 10px blue, 0 0 15px red;
+    }
+    h6{
+        padding-top: 10px;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2 class="text-center" >Login with U R details</h2>
+            <form method="post">
+                {{ loform }}
+                {% csrf_token %}
+                <center>
+                    <input type="submit" value="submit" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-danger">
+                    <h6>Do not have a Account? <a href="/"> SignUp</a></h6>
+                </center>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
